@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&family=Sansita&display=swap');
+/* About */
+
+main {
+    font-family: 'Poppins', sans-serif;
+}
+
+#content {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+#content #About {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+
+}
+
+#content #About .about-text {
+    flex-basis: 50%;
+    padding: 10px;
+}
+
+#content #About .about-text h1 {
+    font-size: 1.9em;
+}
+
+.btn-about {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.btn-about .btn-store {
+    width: 200px;
+    text-align: center;
+    font-size: 1.3em;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-image: linear-gradient(105deg, #ff85ae, #B5FFFC);
+    border-image-slice: 1;
+    margin-right: 10px;
+    color: black;
+    cursor: pointer;
+}
+
+.btn-about a {
+    text-decoration: none;
+}
+
+.btn-about .btn-store:hover {
+    background-color: #ff5b42;
+    color: white;
+    padding: 11px;
+    border: none;
+    transition: all ease-in-out 0.1ms;
+}
+
+
+.btn-about .btn-course {
+    width: 200px;
+    text-align: center;
+    font-size: 1.3em;
+    padding: 11px;
+    color: black;
+    background-color: rgb(255, 240, 103);
+    cursor: pointer;
+}
+
+.btn-about .btn-course:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 230, 0);
+    transition: all ease-in-out 0.1s;
+}
+
+
+
+#About .about-photo {
+
+    flex-basis: 50%;
+    padding: 10px;
+
+}
+
+#About .about-photo .about-img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#About .about-photo {
+    overflow: hidden;
+}
+
+#About .about-photo .about-img:hover {
+    transform: scale(1.1);
+    transition: all ease-in-out 0.5s;
+}
+
+/* Akhir About */
+
+
+/* Certification */
+
+#Certification {
+    margin-bottom: 20px;
+}
+
+#Certification .certificate {}
+
+#Certification .certificate .cert-1 {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* Responsive Breakpoint */
+
+@media screen and (max-width: 992px) {
+    #About {
+
+        flex-direction: column-reverse;
+    }
+
+    #About .about-text {
+        text-align: center;
+    }
+
+    #About .about-text .btn-about {
+        justify-content: center;
+    }
