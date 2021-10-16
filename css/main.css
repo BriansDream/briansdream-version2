@@ -121,8 +121,70 @@ main {
     object-position: center;
 }
 
+/* Popup image when on script onload */
+#PopUp {
+    background-color: rgb(53, 53, 53);
+    position: fixed;
+
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0.8;
+}
+
+#PopUp .image {
+    position: relative;
+
+    top: 20%;
+    left: 24%;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+
+}
+
+#PopUp .image img {
+    width: 50%;
+    opacity: 1;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+#PopUp .image h1 {
+    font-size: 2em;
+    position: absolute;
+    z-index: 200;
+    cursor: pointer;
+    top: 0.2%;
+    left: 48%;
+
+    color: white;
+}
+
 
 /* Responsive Breakpoint */
+
+@media screen and (max-width: 700px) {
+
+    /* Pop Up Image */
+    #PopUp .image {
+        top: 50%;
+        left: 0%;
+    }
+
+    #PopUp .image img {
+        max-width: 100%;
+        border-radius: 5px;
+    }
+
+    #PopUp .image h1 {
+        top: 0%;
+        font-size: 1.2em;
+    }
+}
+
 
 @media screen and (max-width: 992px) {
     #About {
@@ -137,3 +199,19 @@ main {
     #About .about-text .btn-about {
         justify-content: center;
     }
+
+
+    /* Pop Up Image */
+    #PopUp .image {
+        top: 25%;
+        left: 14.5%;
+    }
+
+    #PopUp .image img {
+        width: 70%;
+    }
+
+    #PopUp .image h1 {
+        left: 66%;
+    }
+}
