@@ -13,11 +13,9 @@
 const removeBTN = document.querySelector('.removeBTN');
 const loadPopUp = document.getElementById("PopUp");
 
-
 const loadPage = () => {
         loadPopUp.removeAttribute("hidden");
 }
-
 
 const removePopUpFunct = () => {
     removeBTN.addEventListener('click', function(event) {
