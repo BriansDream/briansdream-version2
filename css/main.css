@@ -1,226 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&family=Sansita&display=swap');
-/* About */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Source+Sans+Pro&display=swap');
 
-main {
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
     font-family: 'Poppins', sans-serif;
+
 }
 
-#content {
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
-#content #About {
+.container-content {
     display: flex;
+    background-color: black;
+}
+
+.container-content .left-content {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    color: white;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
-
-
-}
-
-#content #About .about-text {
-    flex-basis: 50%;
+    text-align: center;
     padding: 10px;
 }
 
-#content #About .about-text h1 {
-    font-size: 1.9em;
-    font-weight: bolder;
-}
-
-.btn-about {
-    margin-top: 25px;
+.container-content .left-content .project {
     display: flex;
-    align-items: center;
-
-
+    margin-top: 5px;
 }
 
-.btn-about .btn-store {
-    width: 200px;
-    text-align: center;
-    font-size: 1.3em;
-    padding: 10px;
-    border: 1px solid transparent;
-    border-image: linear-gradient(105deg, #ff85ae, #B5FFFC);
-    border-image-slice: 1;
-    margin-right: 10px;
-    color: black;
-    font-weight: bolder;
-    cursor: pointer;
-}
-
-.btn-about a {
+.container-content .left-content .project a {
     text-decoration: none;
+    margin: 2px;
 }
 
-.btn-about .btn-store:hover {
-    background-color: #ff5b42;
-    color: white;
-    padding: 11px;
-    border: none;
-    font-weight: bolder;
-    transition: all ease-in-out 0.1ms;
+.container-content .left-content .project a img {
+    max-width: 30px;
 }
 
-
-.btn-about .btn-course {
-    width: 200px;
-    text-align: center;
-    font-size: 1.3em;
-    padding: 11px;
-    color: black;
-    font-weight: bold;
-    background-color: rgb(255, 224, 47);
-    cursor: pointer;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-
-
-
-#About .about-photo {
-
+.container-content .right-content {
     flex-basis: 50%;
-    padding: 10px;
-
+    height: 100%;
 }
 
-#About .about-photo .about-img {
-    width: 100%;
+.container-content .right-content img {
+
     object-fit: cover;
     object-position: center;
-    border-radius: 30px;
-    cursor: pointer;
-}
-
-#About .about-photo {
-    overflow: hidden;
-}
-
-#About .about-photo .about-img:hover {
-    transform: scale(1.1);
-    transition: all ease-in-out 0.5s;
-}
-
-/* Akhir About */
-
-
-/* Certification */
-
-#Certification {
-    margin-bottom: 20px;
-}
-
-#Certification .certificate {}
-
-#Certification .certificate .cert-1 {
     width: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-/* Popup image when on script onload */
-#PopUp {
-    background-color: rgb(53, 53, 53);
-    position: fixed;
-
-    z-index: 1;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    opacity: 0.8;
-}
-
-#PopUp .image {
-    position: relative;
-
-    top: 20%;
-    left: 24%;
-    bottom: 0;
-    right: 0;
-    z-index: 10;
+    height: 100vh;
 
 }
 
-#PopUp .image img {
-    width: 50%;
-    opacity: 1;
-    border-radius: 30px;
-    object-fit: cover;
-}
-
-#PopUp .image h1 {
-    font-size: 2em;
-    position: absolute;
-    z-index: 200;
-    cursor: pointer;
-    top: 0.2%;
-    left: 48%;
-
-    color: white;
-}
-
-
-/* Responsive Breakpoint */
-
-@media screen and (max-width: 700px) {
-
-    /* Pop Up Image */
-    #PopUp .image {
-        top: 50%;
-        left: 0%;
-    }
-
-    #PopUp .image img {
-        max-width: 100%;
-        border-radius: 5px;
-    }
-
-    #PopUp .image h1 {
-        top: 0%;
-        font-size: 1.2em;
-    }
-
-    .btn-about a .btn-store {
-        display: none;
-    }
-
-    .btn-about a .btn-course {
-        border-radius: 30px;
-
-    }
-}
-
-
-@media screen and (max-width: 992px) {
-    #About {
-
+@media screen and (max-width: 800px) {
+    .container-content {
         flex-direction: column-reverse;
-    }
-
-    #About .about-text {
-        text-align: center;
-    }
-
-    #About .about-text .btn-about {
-        justify-content: center;
-    }
-
-
-    /* Pop Up Image */
-    #PopUp .image {
-        top: 25%;
-        left: 14.5%;
-    }
-
-    #PopUp .image img {
-        width: 70%;
-    }
-
-    #PopUp .image h1 {
-        left: 66%;
     }
 }
